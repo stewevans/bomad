@@ -15,5 +15,3 @@ script:
 
 deploy:
   provider: azure_web_apps
-  username: AZURE_USERNAME
-  password: AZURE_PASSWORD
