@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "7"
+
+branches:
+  only:
+  - master
+
+before_script:
+  - npm install -g --silent @angular/cli
+  - npm install
+
+script:
+  - ng build
+
+deploy:
+  provider: azure_web_apps
+  username: AZURE_USERNAME
+  password: AZURE_PASSWORS
