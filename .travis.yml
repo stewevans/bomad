@@ -18,3 +18,4 @@ deploy:
   username: AZURE_WA_USER
   password: AZURE_WA_PASSWORD
   site: bomad
+  skip_cleanup: true
