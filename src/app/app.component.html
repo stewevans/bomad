@@ -93,20 +93,16 @@
 
     <form class="example-form">
 
-        <md-button-toggle-group #group="mdButtonToggleGroup">
-          <md-button-toggle value="Yes">
-            <md-icon>Yes</md-icon>
+        <md-button-toggle-group #group="mdButtonToggleGroup" style="margin-bottom: 30px; margin-top: 10px;">
+          <md-button-toggle value="Yes" checked="true">
+            Yes
           </md-button-toggle>
           <md-button-toggle value="No">
-            <md-icon>No</md-icon>
+            No
           </md-button-toggle>
         </md-button-toggle-group>
 
-        <br/>
-
-<!--         <div class="example-selected-value">Selected value: {{group.value}}</div>
- -->
-      <md-input-container ng-if="group.value === 'Yes'">
+      <md-input-container *ngIf="group.value === 'Yes'" style="float: right">
         <input mdInput placeholder="Fee amount">
       </md-input-container>
     </form>
