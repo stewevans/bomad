@@ -7,11 +7,6 @@ html {
 
 body {
   height: 100%;
-  margin: 30px;
+  margin: 0;
   font-family: Roboto,'Helvetica Neue',sans-serif;
-
-  background: -moz-linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
 }

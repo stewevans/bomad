@@ -1,0 +1,69 @@
+<style>
+  .container {
+    padding: 40px;
+  }
+
+  .mat-display-1 {
+    color: white;
+    font-weight: 200;
+  }
+
+  .key {
+    display: inline-block;
+    color: #383838;
+    font-weight: 100
+  }
+
+  .value {
+    float: right;
+  }
+</style>
+
+<div class="container">
+
+  <div class="offer-details" style="height: 100%">
+    <h1 class="mat-display-1">
+      Loan offer details
+    </h1>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key">You have been <b>offered</b>...</span>
+      <br/>
+
+      <h2>$1000</h2>
+
+      <span class="key">By</span>
+      <span class="value"><b>James Smith</b></span>
+
+      <br/>
+      <span class="key">Interest rate</span>
+      <span class="value"><b>2% p.a.</b></span>
+      <br/>
+      <span class="key">Repayments</span>
+      <span class="value"><b>$100 weekly</b></span>
+      <br/>
+      <span class="key">Late payment fee</span>
+      <span class="value"><b>$10</b></span>
+      <br/>
+      <span class="key">To your account</span>
+      <span class="value"><b>12345678</b></span>
+    </md-card>
+
+    <button md-raised-button [routerLink]="['./']" fragment="offer-accepted">
+      Accept offer
+    </button>
+  </div>
+
+
+  <div id="offer-accepted" style="height: 100%">
+    <img src="../../assets/tick.png" width="100px" height="100px">
+    <h1 class="mat-display-1">
+      Congratulations!
+    </h1>
+
+    <h2>You've accepted the loan terms. You'll receive the funds into your account shortly.</h2>
+
+    <h2>Your first repayment will be for <b>$10</b> on the 31st of August 2017.</h2>
+  </div>
+
+</div>

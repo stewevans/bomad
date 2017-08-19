@@ -1,0 +1,51 @@
+.container {
+  height: 100%;
+  padding: 40px;
+}
+
+.mat-display-1 {
+  padding-top: 150px;
+  font-size: 42px !important;
+  color: white;
+  font-weight: 200;
+  font-family: Roboto,'Helvetica Neue',sans-serif;
+}
+
+.mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::after {
+  background-color: #5e5e61;
+}
+
+.mat-progress-bar-buffer.mat-progress-bar-element {
+  background-color: #e2e2e2 !important;
+}
+
+button {
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.33);
+  box-shadow: none;
+  font-family: Roboto,'Helvetica Neue',sans-serif;
+  font-weight: 200;
+}
+
+.toolbar-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.key {
+  display: inline-block;
+  color: #383838;
+  font-weight: 100
+}
+
+.value {
+  float: right;
+}

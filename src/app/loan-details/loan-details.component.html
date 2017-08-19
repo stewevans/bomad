@@ -1,0 +1,62 @@
+<style>
+  .container {
+    padding: 40px;
+  }
+
+  .mat-display-1 {
+    color: white;
+    font-weight: 200;
+  }
+
+  .key {
+    display: inline-block;
+    color: #383838;
+    font-weight: 100
+  }
+
+  .value {
+    float: right;
+  }
+</style>
+
+<div class="container">
+
+  <div class="offer-details">
+    <h1 class="mat-display-1" style="text-align: center; margin-bottom: 20px;">
+      Your Loan
+
+      <br />
+      <img src="../../assets/graph.png" width="100px" height="100px" style="padding: 10px;">
+    </h1>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key">Outstanding balance</span>
+      <br/>
+
+      <h2>$1000</h2>
+
+      <md-progress-bar
+        class="example-margin"
+        [color]="success"
+        [mode]="determinate"
+        [value]="50"
+        [bufferValue]="75">
+      </md-progress-bar>
+    </md-card>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key">Next payment</span>
+      <br/>
+
+      <h2>$200</h2>
+      <p>on Thursday, 18th August 2017</p>
+
+    </md-card>
+
+    <button md-raised-button>
+      Make extra payment
+    </button>
+  </div>
+
+
+</div>

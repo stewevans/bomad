@@ -1,183 +1,24 @@
-<div class="container">
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav" mode="push">
+    <md-list>
+      <md-list-item [routerLink]="['./create-loan']" (click)="sidenav.close()">Create loan</md-list-item>
+      <md-list-item [routerLink]="['./loan-offer']" (click)="sidenav.close()">Loan offer</md-list-item>
+      <md-list-item [routerLink]="['./loan-details']" (click)="sidenav.close()">Loan details</md-list-item>
+    </md-list>
+  </md-sidenav>
 
-  <div id="screen1" style="height: 100%">
-    <h1 class="mat-display-1">I want to...</h1>
+  <div class="example-sidenav-content">
+    <md-toolbar>
+      <md-icon (click)="sidenav.open()">
+        menu
+      </md-icon>
+    </md-toolbar>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen2">
-      Lend
-    </button>
-    <button md-raised-button>Borrow</button>
+    <div class="example-scrolling-content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
-  <div id="screen2" style="height: 100%">
-    <h1 class="mat-display-1">Who to?</h1>
-
-    <md-input-container>
-      <input mdInput placeholder="Full name">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="Account number">
-    </md-input-container>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen3">
-      Next
-    </button>
-  </div>
-
-
-  <div id="screen3" style="height: 100%">
-    <h1 class="mat-display-1">How much do you want to lend?</h1>
-    <md-input-container>
-      <span mdPrefix>$&nbsp;</span>
-      <input mdInput placeholder="Amount">
-    </md-input-container>
-    <br/>
-    <md-input-container>
-      <input mdInput placeholder="From account number">
-    </md-input-container>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen4">
-      Next
-    </button>
-  </div>
-
-
-  <div id="screen4" style="height: 100%">
-    <h1 class="mat-display-1">
-      What's the interest rate?
-    </h1>
-
-    <form class="example-form">
-
-      <md-input-container style="width:100%">
-        <input type="tel" mdInput placeholder="Rate">
-        <span mdSuffix>% per annum</span>
-      </md-input-container>
-
-    </form>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen5">
-      Next
-    </button>
-  </div>
-
-  <div id="screen5" style="height: 100%">
-    <h1 class="mat-display-1">
-      What will the regular repayments be?
-    </h1>
-
-    <form class="example-form">
-
-    <md-input-container>
-      <span mdPrefix>$&nbsp;</span>
-      <input mdInput placeholder="Amount">
-    </md-input-container>
-
-    <md-select placeholder="Frequency" [(ngModel)]="selectedValue" name="frequency">
-      <md-option *ngFor="let frequency of frequencies" [value]="frequency.value">
-        {{frequency.viewValue}}
-      </md-option>
-    </md-select>
-
-    </form>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen6">
-      Next
-    </button>
-  </div>
-
-  <div id="screen6" style="height: 100%">
-    <h1 class="mat-display-1">
-      Is there a late payment fee?
-    </h1>
-
-    <form class="example-form">
-
-        <md-button-toggle-group #group="mdButtonToggleGroup" style="margin-bottom: 30px; margin-top: 10px;">
-          <md-button-toggle value="Yes" checked="true">
-            Yes
-          </md-button-toggle>
-          <md-button-toggle value="No">
-            No
-          </md-button-toggle>
-        </md-button-toggle-group>
-
-      <md-input-container *ngIf="group.value === 'Yes'" style="float: right">
-        <input mdInput placeholder="Fee amount">
-      </md-input-container>
-    </form>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen7">
-      Next
-    </button>
-  </div>
-
-  <div id="screen7" style="height: 100%">
-    <h1 class="mat-display-1">
-      Almost there.
-    </h1>
-
-    <h3 class="md-subheading-2" style="color: white;">
-      Take a look at the T&amp;Cs...
-    </h3>
-
-    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
-      <span style="display: inline-block; color: #383838;">Bank of Mum and Dad<br/>
-        Terms and Conditions</span>
-      <md-icon style="float: right; color: #383838;">launch</md-icon>
-    </md-card>
-
-    <button md-raised-button [routerLink]="['./']" fragment="screen8">
-      I Agree
-    </button>
-  </div>
-
-
-  <div id="screen8" style="height: 100%">
-    <h1 class="mat-display-1" style="padding-top: 120px">
-      Summary
-    </h1>
-
-    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
-      <span class="key">I want to <b>lend</b>...</span>
-      <br/>
-      <span class="key">To</span>
-      <span class="value"><b>John Smith</b></span>
-      <br/>
-      <span class="key">Account number</span>
-      <span class="value"><b>12345678</b></span>
-
-      <br/>
-      <span class="key">Amount</span>
-      <span class="value"><b>$1000</b></span>
-      <br/>
-      <span class="key">Interest rate</span>
-      <span class="value"><b>2% p.a.</b></span>
-      <br/>
-      <span class="key">Repayments</span>
-      <span class="value"><b>$100 weekly</b></span>
-      <br/>
-      <span class="key">Late payment fee</span>
-      <span class="value"><b>$10</b></span>
-    </md-card>
-
-    <button md-raised-button [routerLink]="['./']" fragment="submit">
-      Submit
-    </button>
-
-  </div>
-
-
-  <md-toolbar class="toolbar-bottom">
-    <md-progress-bar
-      class="example-margin"
-      [color]="'primary'"
-      [mode]="'determinate'"
-      [value]="value"
-      [bufferValue]="bufferValue">
-    </md-progress-bar>
-  </md-toolbar>
-
-</div>
+</md-sidenav-container>
 
 

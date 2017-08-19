@@ -1,6 +1,34 @@
-.container {
+
+.example-container {
+  /*width: 500px;*/
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+  background: -moz-linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(72, 194, 197, 0.7) 0%, rgba(72, 194, 197, 0.7) 3%, rgba(137, 206, 181, 0.7) 99%, rgba(138, 206, 181, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.example-sidenav-content {
+  /*display: flex;*/
+  height: 100%;
+  width: 100%;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+}
+
+.example-sidenav {
+  /*padding: 20px;*/
+
+}
+
+.example-scrolling-content {
+  overflow: auto;
   height: 100%;
 }
+
+md-sidenav-layout .md-sidenav-content { width: 100%; }
 
 .mat-display-1 {
   padding-top: 150px;
