@@ -55,6 +55,65 @@
       </md-input-container>
 
     </form>
+
+    <button md-raised-button [routerLink]="['./']" fragment="screen5">
+      Next
+    </button>
+  </div>
+
+  <div id="screen5" style="height: 100%">
+    <h1 class="mat-display-1">
+      What will the regular repayments be?
+    </h1>
+
+    <form class="example-form">
+
+    <md-input-container>
+      <span mdPrefix>$&nbsp;</span>
+      <input mdInput placeholder="Amount">
+    </md-input-container>
+
+    <md-select placeholder="Frequency" [(ngModel)]="selectedValue" name="frequency">
+      <md-option *ngFor="let frequency of frequencies" [value]="frequency.value">
+        {{frequency.viewValue}}
+      </md-option>
+    </md-select>
+
+    </form>
+
+    <button md-raised-button [routerLink]="['./']" fragment="screen6">
+      Next
+    </button>
+  </div>
+
+  <div id="screen6" style="height: 100%">
+    <h1 class="mat-display-1">
+      Is there a late payment fee?
+    </h1>
+
+    <form class="example-form">
+
+        <md-button-toggle-group #group="mdButtonToggleGroup">
+          <md-button-toggle value="Yes">
+            <md-icon>Yes</md-icon>
+          </md-button-toggle>
+          <md-button-toggle value="No">
+            <md-icon>No</md-icon>
+          </md-button-toggle>
+        </md-button-toggle-group>
+
+        <br/>
+
+<!--         <div class="example-selected-value">Selected value: {{group.value}}</div>
+ -->
+      <md-input-container ng-if="group.value === 'Yes'">
+        <input mdInput placeholder="Fee amount">
+      </md-input-container>
+    </form>
+
+    <button md-raised-button [routerLink]="['./']" fragment="screen7">
+      Next
+    </button>
   </div>
 
   <md-toolbar class="toolbar-bottom">

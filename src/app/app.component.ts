@@ -9,6 +9,8 @@ import {Router, NavigationEnd} from "@angular/router";
 export class AppComponent {
   title = 'app';
 
+  selectedValue: string;
+
   frequencies = [
     {value: 'weekly-0', viewValue: 'Weekly'},
     {value: 'fortnightly-1', viewValue: 'Fortnightly'},

@@ -38,3 +38,15 @@ button {
   bottom: 0;
   left: 0;
 }
+
+.mat-button-toggle-group{
+/*    background-color: rgba(255,255,255,0.2);*/
+  background-color: rgba(255, 255, 255);
+}
+
+
+.mat-button-toggle-checked {
+
+    background-color: rgba(255,255,255, 0.7);
+
+}

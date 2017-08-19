@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdProgressBarModule, MdToolbarModule } from '@angular/material';
+import { MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdProgressBarModule, MdToolbarModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+
+
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +20,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdProgressBarModule, MdToolbarModule,
+    FormsModule,
+    MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdProgressBarModule, MdToolbarModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
