@@ -10,6 +10,20 @@
   font-family: Roboto,'Helvetica Neue',sans-serif;
 }
 
+.mat-card span {
+  padding-top: 15px;
+}
+
+.key {
+  display: inline-block;
+  color: #383838;
+  font-weight: 100
+}
+
+.value {
+  float: right;
+}
+
 .mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::after {
   background-color: #5e5e61;
 }
