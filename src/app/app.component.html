@@ -27,8 +27,8 @@
 
   <div id="screen3" style="height: 100%">
     <h1 class="mat-display-1">How much do you want to lend?</h1>
-        <md-input-container>
-        <span mdPrefix>$&nbsp;</span>
+    <md-input-container>
+      <span mdPrefix>$&nbsp;</span>
       <input mdInput placeholder="Amount">
     </md-input-container>
     <br/>
@@ -115,6 +115,62 @@
       Next
     </button>
   </div>
+
+  <div id="screen7" style="height: 100%">
+    <h1 class="mat-display-1">
+      Almost there.
+    </h1>
+
+    <h3 class="md-subheading-2" style="color: white;">
+      Take a look at the T&amp;Cs...
+    </h3>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span style="display: inline-block; color: #383838;">Bank of Mum and Dad<br/>
+        Terms and Conditions</span>
+      <md-icon style="float: right; color: #383838;">launch</md-icon>
+    </md-card>
+
+    <button md-raised-button [routerLink]="['./']" fragment="screen8">
+      I Agree
+    </button>
+  </div>
+
+
+  <div id="screen8" style="height: 100%">
+    <h1 class="mat-display-1" style="padding-top: 120px">
+      Summary
+    </h1>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span style="display: inline-block; color: #383838; font-weight: 100">I want to <b>lend</b>...</span>
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">To</span>
+      <span style="float: right;"><b>John Smith</b></span>
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">Account number</span>
+      <span style="float: right;"><b>12345678</b></span>
+
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">Amount</span>
+      <span style="float: right;"><b>$1000</b></span>
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">Interest rate</span>
+      <span style="float: right;"><b>2% p.a.</b></span>
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">Repayments</span>
+      <span style="float: right;"><b>$100 weekly</b></span>
+      <br />
+      <span style="display: inline-block; color: #383838;font-weight: 100">Late payment fee</span>
+      <span style="float: right;"><b>$10</b></span>
+    </md-card>
+
+    <button md-raised-button [routerLink]="['./']" fragment="submit">
+      Submit
+    </button>
+
+  </div>
+
 
   <md-toolbar class="toolbar-bottom">
     <md-progress-bar
