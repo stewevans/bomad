@@ -35,6 +35,27 @@
     <md-input-container>
       <input mdInput placeholder="From account number">
     </md-input-container>
+
+    <button md-raised-button [routerLink]="['./']" fragment="screen4">
+      Next
+    </button>
+  </div>
+
+
+  <div id="screen4" style="height: 100%">
+    <h1 class="mat-display-1">
+      What's the interest rate?
+    </h1>
+
+    <form class="example-form">
+
+      <md-input-container style="width:100%">
+        <input type="tel" mdInput placeholder="Rate">
+        <span mdSuffix>% per annum</span>
+      </md-input-container>
+
+    </form>
+>>>>>>> Add screen 4
   </div>
 
   <md-toolbar class="toolbar-bottom">
