@@ -13,4 +13,4 @@ before_script:
 
 script:
   - ng build
-  - sshpass -p "CuaBomad16" scp -rv -o PubkeyAuthentication=no dist/ bomad@13.92.134.14:/home/bomad
+  - sshpass -p "CuaBomad16" scp -rv -o PubkeyAuthentication=no StrictHostKeyChecking=no dist/ bomad@13.92.134.14:/home/bomad
