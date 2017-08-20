@@ -9,6 +9,8 @@ import {Router, NavigationEnd} from "@angular/router";
 export class CreateLoanComponent {
   title = 'app';
 
+  screen = 1;
+
   frequencies = [
     {value: 'weekly-0', viewValue: 'Weekly'},
     {value: 'fortnightly-1', viewValue: 'Fortnightly'},

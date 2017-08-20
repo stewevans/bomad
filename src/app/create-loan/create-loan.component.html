@@ -1,18 +1,18 @@
 <div class="container">
 
-  <div id="screen1" style="height: 100%">
+  <div id="screen1" *ngIf="screen === 1" style="height: 100%">
     <img src="../../assets/loan-lend.png" width="100px" height="100px" style="padding: 10px;">
     <br />
     <h1 class="mat-display-1">I want to...</h1>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen2">
+    <button md-raised-button (click)="screen = 2">
       Lend
     </button>
     <button md-raised-button>Borrow</button>
   </div>
 
-  <div id="screen2" style="height: 100%">
-    <img src="../../assets/loan-to.png" width="100px" height="100px" style="padding: 10px;">
+  <div id="screen2" *ngIf="screen === 2" style="height: 100%">
+    <img src="../../assets/loan-to.png" width="100px" height="100px" style="padding: 10px; margin-left: -22px;">
     <br />
     <h1 class="mat-display-1">Who to?</h1>
 
@@ -23,18 +23,23 @@
       <input mdInput placeholder="Account number">
     </md-input-container>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen3">
-      Next
-    </button>
+    <div class="bottom">
+      <a style="color: white" (click)="screen = 1">
+        Back
+      </a>
+      <button md-raised-button (click)="screen = 3">
+        Next
+      </button>
+    </div>
   </div>
 
 
-  <div id="screen3" style="height: 100%">
-    <img src="../../assets/loan-amount2.png" width="100px" height="100px" style="padding: 10px;">
+  <div id="screen3" *ngIf="screen === 3" style="height: 100%">
+    <img src="../../assets/loan-amount2.png" width="100px" height="100px" style="padding: 10px; margin-left: -20px;">
     <br />
     <h1 class="mat-display-1">How much do you want to lend?</h1>
     <md-input-container>
-      <span mdPrefix>$&nbsp;</span>
+      <span style="color: #383838" mdPrefix>$&nbsp;</span>
       <input mdInput placeholder="Amount">
     </md-input-container>
     <br/>
@@ -42,15 +47,19 @@
       <input mdInput placeholder="From account number">
     </md-input-container>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen4">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 2">
+      Back
+    </a>
+    <button md-raised-button (click)="screen = 4">
       Next
-    </button>
+    </button></div>
   </div>
 
 
-  <div id="screen4" style="height: 100%">
+  <div id="screen4" *ngIf="screen === 4" style="height: 100%">
     <h1 class="mat-display-1">
-      <img src="../../assets/loan-interest-rate2.png" width="100px" height="100px" style="padding: 10px;">
+      <img src="../../assets/loan-interest-rate2.png" width="75px" height="75px" style="margin-bottom: 20px;">
       <br />
       What's the interest rate?
     </h1>
@@ -59,17 +68,21 @@
 
       <md-input-container style="width:100%">
         <input type="tel" mdInput placeholder="Rate">
-        <span mdSuffix>% per annum</span>
+        <span style="color: #383838" mdSuffix>% per annum</span>
       </md-input-container>
 
     </form>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen5">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 3">
+      Back
+    </a>
+    <button md-raised-button (click)="screen = 5">
       Next
-    </button>
+    </button></div>
   </div>
 
-  <div id="screen5" style="height: 100%">
+  <div id="screen5" *ngIf="screen === 5" style="height: 100%">
     <img src="../../assets/loan-repayment2.png" width="100px" height="100px" style="padding: 10px;">
     <br />
     <h1 class="mat-display-1">
@@ -78,7 +91,7 @@
 
     <form class="example-form">
 
-      <md-input-container>
+      <md-input-container style="width: 170px;">
         <span mdPrefix>$&nbsp;</span>
         <input mdInput placeholder="Amount">
       </md-input-container>
@@ -91,12 +104,16 @@
 
     </form>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen6">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 4">
+      Back
+    </a>
+    <button md-raised-button (click)="screen = 6">
       Next
-    </button>
+    </button></div>
   </div>
 
-  <div id="screen6" style="height: 100%">
+  <div id="screen6" *ngIf="screen === 6" style="height: 100%">
     <img src="../../assets/loan-late2.png" width="100px" height="100px" style="padding: 10px;">
     <br />
     <h1 class="mat-display-1">
@@ -114,19 +131,23 @@
         </md-button-toggle>
       </md-button-toggle-group>
 
-      <md-input-container *ngIf="group.value === 'Yes'" style="float: right">
+      <md-input-container *ngIf="group.value === 'Yes'" style="float: right; width: 160px;">
         <span mdPrefix>$&nbsp;</span>
         <input mdInput placeholder="Fee amount">
       </md-input-container>
     </form>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen7">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 5">
+      Back
+    </a>
+    <button md-raised-button (click)="screen = 7">
       Next
-    </button>
+    </button></div>
   </div>
 
-  <div id="screen7" style="height: 100%">
-    <img src="../../assets/loan-tcs2.png" width="100px" height="100px" style="padding: 10px;">
+  <div id="screen7" *ngIf="screen === 7" style="height: 100%">
+    <img src="../../assets/loan-tcs2.png" width="100px" height="100px" style="padding: 10px; margin-left: -20px;">
     <br />
     <h1 class="mat-display-1">
       Almost there.
@@ -142,15 +163,19 @@
       <md-icon style="float: right; color: #383838;">launch</md-icon>
     </md-card>
 
-    <button md-raised-button [routerLink]="['./']" fragment="screen8">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 6">
+      Back
+    </a>
+    <button md-raised-button (click)="screen = 8">
       I Agree
-    </button>
+    </button></div>
   </div>
 
 
-  <div id="screen8" style="height: 100%">
-    <h1 class="mat-display-1" style="padding-top: 120px">
-      Summary
+  <div id="screen8" *ngIf="screen === 8" style="height: 100%">
+    <h1 class="mat-display-1" style="padding-top: 80px">
+      Review
     </h1>
 
     <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
@@ -176,9 +201,13 @@
       <span class="value"><b>$10</b></span>
     </md-card>
 
-    <button md-raised-button [routerLink]="['./']" fragment="submit">
+    <div class="bottom">
+    <a style="color: white" (click)="screen = 7">
+      Back
+    </a>
+    <button md-raised-button [routerLink]="['/loan-details']">
       Submit
-    </button>
+    </button></div>
 
   </div>
 

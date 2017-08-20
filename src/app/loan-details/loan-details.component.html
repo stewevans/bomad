@@ -130,6 +130,10 @@
               [chartType]="'line'"></canvas>
     </md-card>
 
+    <button md-raised-button>
+      Make extra payment
+    </button>
+
     <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
       <span class="key">Next payment</span>
       <br/>
@@ -139,31 +143,7 @@
 
     </md-card>
 
-    <button md-raised-button>
-      Make extra payment
-    </button>
-
-    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
-      <span class="key" style="margin-bottom: 20px">Your credit score</span>
-      <br/>
-
-      <canvas baseChart width="400" height="200"
-              [datasets]="pieChartData"
-              [labels]="pieChartLabels"
-              [options]="pieChartOptions"
-              [colors]="pieChartColors"
-              [legend]="false"
-              [chartType]="'doughnut'"></canvas>
-
-      <div style="margin-top: -52px; text-align: center;">
-        <div style="font-size: 42px;">705</div>
-        <div style="color: #009578">VERY GOOD</div>
-      </div>
-
-
-    </md-card>
-
-    <button md-raised-button>
+    <button md-raised-button [routerLink]="['/credit-report']">
       View credit report
     </button>
   </div>

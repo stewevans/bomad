@@ -12,11 +12,13 @@ import { AppComponent } from './app.component';
 import { CreateLoanComponent } from "./create-loan/create-loan.component";
 import { LoanOfferComponent } from './loan-offer/loan-offer.component';
 import { LoanDetailsComponent } from './loan-details/loan-details.component';
+import { CreditReportComponent } from './credit-report/credit-report.component';
 
 const appRoutes: Routes = [
   { path: 'create-loan', component: CreateLoanComponent },
   { path: 'loan-offer', component: LoanOfferComponent },
-  { path: 'loan-details', component: LoanDetailsComponent }
+  { path: 'loan-details', component: LoanDetailsComponent },
+  { path: 'credit-report', component: CreditReportComponent }
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     CreateLoanComponent,
     LoanOfferComponent,
-    LoanDetailsComponent
+    LoanDetailsComponent,
+    CreditReportComponent
 ],
   imports: [
     BrowserModule,
