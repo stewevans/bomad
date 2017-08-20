@@ -5,4 +5,6 @@ import {Component} from '@angular/core';
   templateUrl: './loan-offer.component.html',
   styleUrls: ['./loan-offer.component.css']
 })
-export class LoanOfferComponent {}
+export class LoanOfferComponent {
+  screen = 1;
+}

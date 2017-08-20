@@ -24,7 +24,7 @@
 
 <div class="container">
 
-  <div class="offer-details" style="height: 100%">
+  <div class="offer-details" *ngIf="screen === 1" style="height: 100%">
     <h1 class="mat-display-1">
       Loan offer details
     </h1>
@@ -52,21 +52,21 @@
       <span class="value"><b>12345678</b></span>
     </md-card>
 
-    <button md-raised-button [routerLink]="['./']" fragment="offer-accepted">
+    <button md-raised-button (click)="screen = 2">
       Accept offer
     </button>
   </div>
 
 
-  <div id="offer-accepted" style="height: 100%">
+  <div id="offer-accepted" *ngIf="screen === 2" style="height: 100%">
     <img src="/assets/tick.png" width="100px" height="100px">
-    <h1 class="mat-display-1">
+    <h1 class="mat-display-1" style="margin-top: 20px;">
       Congratulations!
     </h1>
 
-    <h2>You've accepted the loan terms. You'll receive the funds into your account shortly.</h2>
+    <h2 style="color: white; font-weight: 200;">You've accepted the loan terms. You'll receive the funds into your account shortly.</h2>
 
-    <h2>Your first repayment will be for <b>$10</b> on the 31st of August 2017.</h2>
+    <h2 style="color: white; font-weight: 200;">Your first repayment will be for <b>$10</b> on the 31st of August 2017.</h2>
   </div>
 
 </div>

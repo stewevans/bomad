@@ -1,0 +1,73 @@
+<style>
+  .container {
+    padding: 40px;
+    margin-top: 50px;
+    height: inherit;
+  }
+
+  .mat-display-1 {
+    color: white;
+    font-weight: 200;
+  }
+
+  .key {
+    display: inline-block;
+    color: #383838;
+    font-weight: 100
+  }
+
+  .value {
+    float: right;
+  }
+</style>
+
+<div class="container">
+
+  <div class="offer-details">
+    <h1 class="mat-display-1" style="margin-bottom: 20px;">
+      Your Credit Report
+      <br />
+    </h1>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key" style="margin-bottom: 20px">Your credit score</span>
+      <br/>
+
+      <canvas baseChart width="400" height="200"
+              [datasets]="pieChartData"
+              [labels]="pieChartLabels"
+              [options]="pieChartOptions"
+              [colors]="pieChartColors"
+              [legend]="false"
+              [chartType]="'doughnut'"></canvas>
+
+      <div style="margin-top: -52px; text-align: center;">
+        <div style="font-size: 42px;">705</div>
+        <div style="color: #009578">VERY GOOD</div>
+      </div>
+
+      <span class="key" style="margin-top:10px;">
+        Missed payments
+      </span>
+      <span class="value"  style="margin-top:10px;">0</span>
+
+    </md-card>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none; font-weight: 100;">
+      <md-icon style="float:left">local_offers</md-icon>
+      <span class="key" style="margin-bottom: 20px; padding: 3px; padding-left: 7px;">Offers</span>
+      <br/>
+
+      <span>You have been conditionally approved for a <b>Personal Loan</b>
+        of up to <b>$10,000</b>:</span>
+      <br /><br />
+
+      <button md-raised-button style="color: #383838; background-color: #dae8ec">
+        Apply now
+      </button>
+
+    </md-card>
+  </div>
+
+
+</div>

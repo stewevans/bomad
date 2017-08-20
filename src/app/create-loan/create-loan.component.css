@@ -1,15 +1,15 @@
 .container {
-  height: 100%;
-  padding: 40px;
-  margin-top: 50px;
+  margin-top: 100px;
+  padding: 0 40px;
 }
 
 .mat-display-1 {
   padding-top: 20px;
-  font-size: 42px !important;
+  font-size: 38px !important;
   color: white;
   font-weight: 200;
   font-family: Roboto,'Helvetica Neue',sans-serif;
+  line-height: inherit;
 }
 
 .mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element::after {
@@ -30,6 +30,14 @@ md-button-toggle {
 
 md-button-toggle.mat-button-toggle-checked {
   background-color: rgba(254, 254, 255, 0.85);
+}
+
+.mat-button-toggle-label-content {
+  color: #565656;
+}
+
+.mat-button-toggle-label-content .mat-button-toggle-checked {
+  color: #565656;
 }
 
 .mat-focused .mat-input-placeholder {
@@ -65,4 +73,18 @@ button {
 
 .value {
   float: right;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.bottom a {
+  position: absolute;
+  bottom: 85px;
 }
