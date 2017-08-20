@@ -18,6 +18,21 @@
   .value {
     float: right;
   }
+
+  .bell {
+    background-color: red;
+    float: right;
+    margin-right: -33px;
+    font-size: 14px;
+    padding: 0;
+    height: 14px;
+    width: 15px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: normal;
+    border-radius: 7px;
+    margin-top: 27px;
+  }
 </style>
 
 <div class="container">
@@ -27,6 +42,9 @@
       <!--<img src="/assets/graph.png" width="40px" height="40px" style="padding: 10px;float:right">-->
 
       Your Loan
+
+      <md-icon style="float: right; font-size: 30px; padding-top: 7px;">notifications_none</md-icon>
+      <span class="bell" (click)="openDialog()">2</span>
       <br />
     </h1>
 
