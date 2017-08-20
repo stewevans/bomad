@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {MdDialog, MdDialogRef} from '@angular/material';
+import {NotificationDialog} from "./notification-dialog/notification-dialog.component";
 
 @Component({
   selector: 'loan-details',
@@ -6,6 +8,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./loan-details.component.css']
 })
 export class LoanDetailsComponent {
+
+  constructor(public dialog: MdDialog) {}
+
+  openDialog() {
+    let dialogRef = this.dialog.open(NotificationDialog);
+  }
 
   public lineChartData:Array<any> = [
     {data: [3000, 2800, 2600, 2000, 1400, 1200, 1000], label: 'Series A'},

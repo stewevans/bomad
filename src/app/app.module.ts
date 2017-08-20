@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule,
-  MdProgressBarModule, MdToolbarModule, MdListModule, MdCardModule, MdIconModule, MdSidenavModule } from '@angular/material';
+import { MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdDialogModule,
+  MdProgressBarModule, MdToolbarModule, MdListModule, MdCardModule, MdIconModule, MdSidenavModule, MdTableModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
@@ -13,6 +13,7 @@ import { CreateLoanComponent } from "./create-loan/create-loan.component";
 import { LoanOfferComponent } from './loan-offer/loan-offer.component';
 import { LoanDetailsComponent } from './loan-details/loan-details.component';
 import { CreditReportComponent } from './credit-report/credit-report.component';
+import { NotificationDialog } from './loan-details/notification-dialog/notification-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'create-loan', component: CreateLoanComponent },
@@ -27,14 +28,18 @@ const appRoutes: Routes = [
     CreateLoanComponent,
     LoanOfferComponent,
     LoanDetailsComponent,
-    CreditReportComponent
+    CreditReportComponent,
+    NotificationDialog
 ],
+  entryComponents: [
+    NotificationDialog
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule,
-    MdProgressBarModule, MdToolbarModule, MdListModule, MdCardModule, MdIconModule, MdSidenavModule,
+    MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule, MdDialogModule,
+    MdProgressBarModule, MdToolbarModule, MdListModule, MdCardModule, MdIconModule, MdSidenavModule, MdTableModule,
     ChartsModule,
     RouterModule.forRoot(
       appRoutes,
