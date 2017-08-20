@@ -115,6 +115,7 @@
       </md-button-toggle-group>
 
       <md-input-container *ngIf="group.value === 'Yes'" style="float: right">
+        <span mdPrefix>$&nbsp;</span>
         <input mdInput placeholder="Fee amount">
       </md-input-container>
     </form>
@@ -182,15 +183,15 @@
   </div>
 
 
-  <md-toolbar class="toolbar-bottom">
-    <md-progress-bar
-      class="example-margin"
-      [color]="'primary'"
-      [mode]="'determinate'"
-      [value]="value"
-      [bufferValue]="bufferValue">
-    </md-progress-bar>
-  </md-toolbar>
+  <!--<md-toolbar class="toolbar-bottom">-->
+    <!--<md-progress-bar-->
+      <!--class="example-margin"-->
+      <!--[color]="'primary'"-->
+      <!--[mode]="'determinate'"-->
+      <!--[value]="value"-->
+      <!--[bufferValue]="bufferValue">-->
+    <!--</md-progress-bar>-->
+  <!--</md-toolbar>-->
 </div>
 
 

@@ -5,6 +5,7 @@ import { MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms'; // <-- NgModel lives here
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     FormsModule,
     MdButtonToggleModule, MdButtonModule, MdCheckboxModule, MdInputModule, MdSelectModule,
     MdProgressBarModule, MdToolbarModule, MdListModule, MdCardModule, MdIconModule, MdSidenavModule,
+    ChartsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
