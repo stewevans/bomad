@@ -2,7 +2,7 @@
 
   <div id="screen1" *ngIf="screen === 1" style="height: 100%">
     <img src="../../assets/loan-lend.png" width="100px" height="100px" style="padding: 10px;">
-    <br />
+    <h1 class="mat-display-1">Bank of Mum & Dad</h1>
     <h1 class="mat-display-1">I want to...</h1>
 
     <button md-raised-button (click)="screen = 2">
@@ -14,7 +14,7 @@
   <div id="screen2" *ngIf="screen === 2" style="height: 100%">
     <img src="../../assets/loan-to.png" width="100px" height="100px" style="padding: 10px; margin-left: -22px;">
     <br />
-    <h1 class="mat-display-1">Who to?</h1>
+    <h1 class="mat-display-1">Who do you want to lend to?</h1>
 
     <md-input-container>
       <input mdInput placeholder="Full name">
@@ -44,7 +44,7 @@
     </md-input-container>
 
     <div>
-      <md-select placeholder="From account number">
+      <md-select placeholder="From account">
         <md-option *ngFor="let account of accounts" [value]="account">
           {{ account.accountNumber }} - ${{ account.balance }}
         </md-option>
@@ -188,7 +188,7 @@
       <br/>
       <br/>
       <span class="key">To</span>
-      <span class="value"><b>Sky Smith</b></span>
+      <span class="value"><b>Skye Smith</b></span>
       <br/>
       <span class="key">Account number</span>
       <span class="value">
@@ -199,10 +199,10 @@
 
       <br/>
       <span class="key">Amount</span>
-      <span class="value"><b>$1000</b></span>
+      <span class="value"><b>$3000</b></span>
       <br/>
       <span class="key">Interest rate</span>
-      <span class="value"><b>2% p.a.</b></span>
+      <span class="value"><b>2.5% p.a.</b></span>
       <br/>
       <span class="key">Repayments</span>
       <span class="value"><b>$100 weekly</b></span>
@@ -215,11 +215,26 @@
     <a style="color: white" (click)="screen = 7">
       Back
     </a>
-    <button md-raised-button [routerLink]="['/loan-details']">
+    <button md-raised-button (click)="screen = 9">
       Submit
-    </button></div>
-
+    </button>
+    </div>
   </div>
+
+
+  <div id="screen9" *ngIf="screen === 9" style="height: 100%">
+    <img src="/assets/tick.png" width="100px" height="100px">
+    <h1 class="mat-display-1" style="margin-top: 20px;">
+      Loan offer complete!
+    </h1>
+
+    <h2 style="color: white; font-weight: 200;">Your loan offer has now been submitted to Skye</h2>
+
+    <button md-raised-button [routerLink]="['/loan-offer']">
+      View loan offer
+    </button>
+  </div>
+
 
 
   <!--<md-toolbar class="toolbar-bottom">-->
