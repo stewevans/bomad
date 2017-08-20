@@ -1,4 +1,37 @@
 
+.logo {
+
+  display: absolute;
+  float: right;
+  margin-top: 10px;
+
+}
+
+.logo img {
+
+  height:45px; 
+  width:70px;
+}
+/*
+    .logo a {
+        width: 180px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+    }
+
+        .logo a img {
+            height: 100%;
+            transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }*/
+
 .example-container {
   /*width: 500px;*/
   width: 100%;
@@ -27,6 +60,17 @@
   overflow: auto;
   height: 100%;
 }
+
+.header {
+    position: absolute;
+    top: 0px;
+    z-index: 1000;
+    color: rgba(72, 194, 197, 0.7);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);        
+
+}
+
 
 md-sidenav-layout .md-sidenav-content { width: 100%; }
 
