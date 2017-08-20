@@ -23,39 +23,148 @@
 <div class="container">
 
   <div class="offer-details">
-    <h1 class="mat-display-1" style="text-align: center; margin-bottom: 20px;">
-      Your Loan
+    <h1 class="mat-display-1" style="margin-bottom: 20px;">
+      <!--<img src="/assets/graph.png" width="40px" height="40px" style="padding: 10px;float:right">-->
 
+      Your Loan
       <br />
-      <img src="/assets/graph.png" width="100px" height="100px" style="padding: 10px;">
     </h1>
 
     <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
       <span class="key">Outstanding balance</span>
       <br/>
 
-      <h2>$1000</h2>
+      <h2>$1,000.00</h2>
 
-      <md-progress-bar
-        class="example-margin"
-        [color]="success"
-        [mode]="determinate"
-        [value]="50"
-        [bufferValue]="75">
-      </md-progress-bar>
+      <style>
+        .meter {
+          height: 20px;  /* Can be anything */
+          position: relative;
+          margin: 10px 0 20px 0; /* Just for demo spacing */
+          background: #dae8ec;
+        }
+        .meter > span {
+          display: block;
+          height: 100%;
+          background-color: #009578;
+          position: relative;
+          overflow: hidden;
+        }
+        .meter > span:after, .animate > span > span {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+          background-image:
+            -webkit-gradient(linear, 0 0, 100% 100%,
+            color-stop(.25, rgba(255, 255, 255, .2)),
+            color-stop(.25, transparent), color-stop(.5, transparent),
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.75, rgba(255, 255, 255, .2)),
+            color-stop(.75, transparent), to(transparent)
+            );
+          background-image:
+            -moz-linear-gradient(
+              -45deg,
+              rgba(255, 255, 255, .2) 25%,
+              transparent 25%,
+              transparent 50%,
+              rgba(255, 255, 255, .2) 50%,
+              rgba(255, 255, 255, .2) 75%,
+              transparent 75%,
+              transparent
+            );
+          z-index: 1;
+          -webkit-background-size: 50px 50px;
+          -moz-background-size: 50px 50px;
+          overflow: hidden;
+        }
+
+        .animate > span:after {
+          display: none;
+        }
+
+      </style>
+
+      <div class="meter">
+        <span style="width: 75%"></span>
+      </div>
+
+      <span class="key">
+        Total principal paid
+      </span>
+      <span class="value">$2,000.00</span>
+
+      <span class="key">
+        Total interest paid
+      </span>
+      <span class="value">$123.82</span>
+
+      <!--<canvas baseChart width="400" height="100" style="background-color: gray"-->
+              <!--[datasets]="barChartData"-->
+              <!--[labels]="barChartLabels"-->
+              <!--[options]="barChartOptions"-->
+              <!--[colors]="barChartColors"-->
+              <!--[legend]="false"-->
+              <!--[chartType]="'horizontalBar'"></canvas>-->
+
+      <!--<md-progress-bar-->
+        <!--class="example-margin"-->
+        <!--[color]="success"-->
+        <!--[mode]="determinate"-->
+        <!--[value]="50"-->
+        <!--[bufferValue]="75">-->
+      <!--</md-progress-bar>-->
+
+
+    </md-card>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key" style="margin-bottom: 20px">Your repayments</span>
+      <br/>
+      <canvas baseChart width="400" height="200"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="false"
+              [chartType]="'line'"></canvas>
     </md-card>
 
     <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
       <span class="key">Next payment</span>
       <br/>
 
-      <h2>$200</h2>
+      <h2>$200.00</h2>
       <p>on Thursday, 18th August 2017</p>
 
     </md-card>
 
     <button md-raised-button>
       Make extra payment
+    </button>
+
+    <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
+      <span class="key" style="margin-bottom: 20px">Your credit score</span>
+      <br/>
+
+      <canvas baseChart width="400" height="200"
+              [datasets]="pieChartData"
+              [labels]="pieChartLabels"
+              [options]="pieChartOptions"
+              [colors]="pieChartColors"
+              [legend]="false"
+              [chartType]="'doughnut'"></canvas>
+
+      <div style="margin-top: -52px; text-align: center;">
+        <div style="font-size: 42px;">705</div>
+        <div style="color: #009578">VERY GOOD</div>
+      </div>
+
+
+    </md-card>
+
+    <button md-raised-button>
+      View credit report
     </button>
   </div>
 

@@ -20,6 +20,22 @@
   background-color: #e2e2e2 !important;
 }
 
+md-button-toggle-group.mat-button-toggle-group {
+  box-shadow: none;
+}
+
+md-button-toggle {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+md-button-toggle.mat-button-toggle-checked {
+  background-color: rgba(254, 254, 255, 0.85);
+}
+
+.mat-focused .mat-input-placeholder {
+  color: #565656 !important;
+}
+
 button {
   width: 100%;
   vertical-align: middle;
