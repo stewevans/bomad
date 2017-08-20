@@ -7,13 +7,16 @@
     </md-list>
   </md-sidenav>
 
-  <div class="example-sidenav-content">
-    <md-toolbar>
-      <md-icon (click)="sidenav.open()">
-        menu
-      </md-icon>
-    </md-toolbar>
+  <md-toolbar class="header">
+    <md-icon (click)="sidenav.open()">
+      menu
+    </md-icon>
+    <div class="logo">
+      <img src="assets/logo.png">
+    </div>
+  </md-toolbar>
 
+  <div class="example-sidenav-content">
     <div class="example-scrolling-content">
       <router-outlet></router-outlet>
     </div>
