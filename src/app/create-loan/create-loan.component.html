@@ -37,10 +37,15 @@
       <span mdPrefix>$&nbsp;</span>
       <input mdInput placeholder="Amount">
     </md-input-container>
-    <br/>
-    <md-input-container>
-      <input mdInput placeholder="From account number">
-    </md-input-container>
+
+    <div>
+      <md-select placeholder="From account number">
+        <md-option *ngFor="let account of accounts" [value]="account">
+          {{ account.accountNumber }} - ${{ account.balance }}
+        </md-option>
+      </md-select>
+    </div>
+
 
     <button md-raised-button [routerLink]="['./']" fragment="screen4">
       Next
@@ -156,11 +161,16 @@
     <md-card style="margin-bottom: 20px; background-color: rgba(255, 255, 255, 0.85); box-shadow: none;">
       <span class="key">I want to <b>lend</b>...</span>
       <br/>
+      <br/>
       <span class="key">To</span>
-      <span class="value"><b>John Smith</b></span>
+      <span class="value"><b>Sky Smith</b></span>
       <br/>
       <span class="key">Account number</span>
-      <span class="value"><b>12345678</b></span>
+      <span class="value">
+<!--         <div *ngIf="selectedAccount"> -->
+          <b>{{selectedAccount.accountNumber}}</b>
+        <!-- </div> -->
+      </span>
 
       <br/>
       <span class="key">Amount</span>
